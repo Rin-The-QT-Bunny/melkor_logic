@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
 
-from aluneth.rinlearn.nn.functional_net import FCBlock
+from moic.mklearn.nn.functional_net import FCBlock
 
 class NNNet(nn.Module):
     def __init__(self,hidden,layers,inputs,outputs):
