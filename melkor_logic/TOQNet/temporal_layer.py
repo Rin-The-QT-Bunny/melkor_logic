@@ -51,8 +51,8 @@ class TemporalLogicNet(nn.Module):
         super().__init__()
         self.configs = configs
         self.temporal_nets = nn.ModuleList([])
-        for i in range(len(configs)):
-            self.temporal_nets.append(TemporalLogicLayer(configs[i][0],configs[i][1]))
+        for i in range(len(configs)-1):
+            self.temporal_nets.append(TemporalLogicLayer(configs[i],configs[i+1]))
     def forward(self,x):
         for net in self.temporal_nets:
             x = net(x)

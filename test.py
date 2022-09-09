@@ -8,9 +8,7 @@ spatial_config = (
     )
 
 temporal_config = (
-    [24,28],
-    [28,30],
-    [30,32]
+    24,28,30,32
 )
 
 P = torch.randn([b,T,d0])

@@ -7,7 +7,7 @@ class TOQNet(nn.Module):
         self.spatial_net = SpatialLogicNet(spatial_config)
         self.temporal_net = TemporalLogicNet(temporal_config)
         in_dim = spatial_config[-1][0]
-        self.temporal_init = TemporalInitial(in_dim,temporal_config[0][0])
+        self.temporal_init = TemporalInitial(in_dim,temporal_config[0])
     
     def forward(self,P,Q,R):
         P,Q,R = self.spatial_net(P,Q,R)
@@ -24,9 +24,7 @@ if __name__ == "__main__":
     )
 
     config2 = (
-    [24,28],
-    [28,30],
-    [30,32]
+    24,28,30,32
     )
 
     P = torch.randn([b,T,d0])
