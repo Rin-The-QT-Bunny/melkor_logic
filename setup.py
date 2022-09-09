@@ -14,6 +14,6 @@ setup(
     packages=find_packages(),
     package_data={
         '':['melkor_logic'],
-        'bandwidth_reporter':['melkor_engine']
+        'bandwidth_reporter':['melkor_logic']
                },
 )
